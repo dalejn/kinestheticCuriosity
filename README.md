@@ -62,5 +62,6 @@ Dale Zhou (dalezhou [at] pennmedicine.upenn.edu)
 5. qsub `launchTest.sh` to launch the `testFit.py` scripts
 
 ### Notes
+The growth model itself is `errwLevyFunction.py` or `errwLevyFunction.m` for equivalent Python and MATLAB versions. All other code is to fit individual data to that growth model. 
 
 Scripts were run on a high-performance computing cluster.
