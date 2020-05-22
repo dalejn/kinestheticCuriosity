@@ -10,9 +10,9 @@ arch           x86_64
 os             linux-gnu                   
 system         x86_64, linux-gnu           
 
-R: 			   3.5.1 (2018-07-02)
+R:             3.5.1 (2018-07-02)
 MATLAB:        9.6.0.1174912 (R2019a)
-Python:		   2.7.15
+Python:        2.7.15
 ```
 
 See `environment_root.yml` for Python libraries and packages used.
@@ -26,25 +26,28 @@ Dale Zhou (dalezhou [at] pennmedicine.upenn.edu)
 ```
 
     ├── data                                    <- Data goes here.
-    │ 
+    │      |
+    │      ├── subjectLevel
+    │      ├── kFolds
+    │
     ├── scripts                                 <- Downloaded functions go here
-    │	   |
-   	│  	   ├── copyScripts.sh 					<- prepare code to fit each individual
-  	│  	   ├── editScripts.sh 					<- prepare code to fit each individual
-  	│  	   ├── entropySimulated.py 				<- function for entropy
-  	│  	   ├── errwLevyFunction.py 				<- function for growth model
-  	│  	   ├── errwLevyFunction.m 				<- MATLAB version of growth model
-  	│  	   ├── heapsSimulated.py 				<- function for Heaps' law
-  	│  	   ├── intervalsSimulated.py 			<- function for inter-event time
-  	│  	   ├── launchAnalysis.sh 				<- launch training on cluster
-  	│  	   ├── launchTest.sh 					<- launch test on cluster
-  	│  	   ├── nsga.py 							<- main script running evolutionary optimization
-  	│  	   ├── testFit.py 						<- main script testing fit
-  	│  	   ├── wikiWrangler.R 					<- prepare code to fit each individual
-  	│  	   ├── zipfsSimulated.py 				<- function for Zipf's law
-  	│
-   	│
-    ├── environment_root.yml  					<- Python environment packages
+    │      |
+    │      ├── copyScripts.sh                   <- prepare code to fit each individual
+    │      ├── editScripts.sh                   <- prepare code to fit each individual
+    │      ├── entropySimulated.py              <- function for entropy
+    │      ├── errwLevyFunction.py              <- function for growth model
+    │      ├── errwLevyFunction.m               <- MATLAB version of growth model
+    │      ├── heapsSimulated.py                <- function for Heaps' law
+    │      ├── intervalsSimulated.py            <- function for inter-event time
+    │      ├── launchAnalysis.sh                <- launch training on cluster
+    │      ├── launchTest.sh                    <- launch test on cluster
+    │      ├── nsga.py                          <- main script running evolutionary optimization
+    │      ├── testFit.py                       <- main script testing fit
+    │      ├── wikiWrangler.R                   <- prepare code to fit each individual
+    │      ├── zipfsSimulated.py                <- function for Zipf's law
+    │
+    │
+    ├── environment_root.yml                    <- Python environment packages
     │
     ├── README.md
 
@@ -52,10 +55,11 @@ Dale Zhou (dalezhou [at] pennmedicine.upenn.edu)
 
 ## Order of scripts
 
-1. Run wikiWrangler.R to get train and test folds
-2. copyScripts.sh if copyCommands does not exist. Then source copyCommands
-3. editScripts.sh if editCommands does not exist. Then source editCommands
-4. qsub launchAnalysis.sh
+1. Run `wikiWrangler.R` to get train and test folds
+2. `opyScripts.sh` if `copyCommands` does not exist. Then source `copyCommands`
+3. `editScripts.sh` if `editCommands` does not exist. Then source `editCommands`
+4. qsub `launchAnalysis.sh` to launch the `nsga.py` scripts
+5. qsub `launchTest.sh` to launch the `testFit.py` scripts
 
 ### Notes
 
