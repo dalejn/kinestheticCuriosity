@@ -56,7 +56,7 @@ Dale Zhou (dalezhou [at] pennmedicine.upenn.edu)
 ## Order of scripts
 
 1. Run `wikiWrangler.R` to get train and test folds
-2. `opyScripts.sh` if `copyCommands` does not exist. Then source `copyCommands`
+2. `copyScripts.sh` if `copyCommands` does not exist. Then source `copyCommands`
 3. `editScripts.sh` if `editCommands` does not exist. Then source `editCommands`
 4. qsub `launchAnalysis.sh` to launch the `nsga.py` scripts
 5. qsub `launchTest.sh` to launch the `testFit.py` scripts
